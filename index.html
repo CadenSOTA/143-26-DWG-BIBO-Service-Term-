@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Digital BIBO Form</title>
     <style>
-        /* This makes the page fill the entire mobile screen */
-        body, html { 
-            margin: 0; 
-            padding: 0; 
-            height: 100%; 
-            width: 100%; 
-            overflow: hidden; /* Prevents double scrollbars */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Fixes background page */
+            background-color: #f0f0f0; /* Matches Google's light grey background */
         }
-        iframe { 
-            width: 100%; 
-            height: 100vh; /* Sets height to 100% of the visible screen */
+        .scroll-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow-y: auto; /* Forces the scroll on this container */
+            -webkit-overflow-scrolling: touch; /* Makes scrolling smooth on iPhones */
+        }
+        iframe {
+            width: 100%;
+            height: 1200px; /* Set this height to match your form's length */
             border: none;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <iframe src="https://forms.gle/2LJk6q6qLSgHg5by7/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div class="scroll-container">
+        <!-- REPLACED WITH YOUR LINK BELOW -->
+        <iframe src="https://forms.gle/2LJk6q6qLSgHg5by7/viewform?embedded=true">Loading…</iframe>
+    </div>
 </body>
 </html>
